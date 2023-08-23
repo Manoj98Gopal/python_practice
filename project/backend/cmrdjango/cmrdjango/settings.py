@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'cmrdjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cmrdb',
+        'USER': 'admin',
+        'PASSWORD' : '1234',
+        'HOST':'localhost',
+        'PORT': 5432
     }
 }
 
