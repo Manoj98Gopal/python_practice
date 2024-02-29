@@ -6,9 +6,9 @@ name = "Manoj G"    #string
 is_Coder = True     #boolean
 
 
-print("age is ===",age)
-print("name is ===",name)
-print("proffestion is  ===",is_Coder)
+# print("age is ===",age)
+# print("name is ===",name)
+# print("proffestion is  ===",is_Coder)
 
 
 #Data types
@@ -22,12 +22,58 @@ cordinates = (3,5)                     #tuple         :-  similar to lists, but 
 person = {'name':'Manoj','age':'25'}   #dictionary    :-  Represents a collection of key-value pairs.
 unique_number = {1,2,3,4,5}            #Set           :-  Represents an unordered collection of unique elements.
 
-print("This is interger ===",age)
-print ("This is float",height)
-print("This is string ===",name)
-print("This is Boolean ===",is_Dancer)
-print("This is list ===",numbers)
-print("This is tuple ===",cordinates)
-print("This is dictionary ==== ",person)
-print("THis is sets ===",type(unique_number))
+# print("This is interger ===",age)
+# print ("This is float",height)
+# print("This is string ===",name)
+# print("This is Boolean ===",is_Dancer)
+# print("This is list ===",numbers)
+# print("This is tuple ===",cordinates)
+# print("This is dictionary ==== ",person)
+# print("THis is sets ===",type(unique_number))
+
+
+
+# ------------------------- List manipulation -----------------------------------------
+
+# creating list 
+my_list = [1,2,3,4,5,6]
+
+# append() method adds a single element to the end of the list.
+my_list.append(10)
+
+# extend() method appends elements from another iterable to the end of the list.
+my_list.extend([11,12,13,14])
+
+# insert() method inserts an element at a specified index in the list.
+my_list.insert(0,55)
+
+# remove()  remove specific element
+my_list.remove(12)
+
+# pop()  based on index number it is removing if index is not specified it is removed last elemtn
+removedElement1 = my_list.pop(1)
+removedElement2 = my_list.pop()
+
+# print("removed based on index ==",removedElement1)
+# print("removed last element ==",removedElement2)
+
+
+#Indexing and slicing
+access_specific_index = my_list[2]
+access_slice_part = my_list[2:7]
+
+
+# reversing the list 
+temp_list = [1,2,3,4,5,6]
+temp_list.reverse()
+
+#sorting the element 
+unsorted_list = [4,3,5,6,4,2,1,2,3]
+unsorted_list.sort()
+
+
+# we can clear the list 
+temp_list.clear()
+
+print(temp_list)
 
