@@ -75,5 +75,84 @@ unsorted_list.sort()
 # we can clear the list 
 temp_list.clear()
 
-print(temp_list)
+
+
+# ------------------------- dictionary manipulation -----------------------------------------
+
+
+#Dictionaries creation
+my_dict = {
+    "name" : "Manoj G",
+    "age" : 25
+}
+
+
+#we can acess the data in two way
+# 1)first way
+one = my_dict["name"]
+
+# 2)second way
+second = my_dict.get("age")
+
+
+
+# Iterating Over Items
+
+#using loop
+for key, value in my_dict.items():
+    print("keys ===",key, "values ===",value)
+    
+    
+
+#we can update dictionary in two ways
+
+# 1) using square brackets
+my_dict["city"] = "Mysore"
+my_dict["age"] = 26
+
+# 2) using update method
+my_dict.update({"name" : "Manoj Achar","degree" : "BCA"})
+
+
+
+# Checking for Key Existence:
+
+# Using 'in' keyword
+if 'age' in my_dict:
+    print("age is exisiste")
+else:
+    print("age is not existit")
+
+
+#using key method
+if 'name' in my_dict.keys():
+    print("keys method exist")
+
+
+
+# Getting Keys and Values:
+
+my_dict_keys = my_dict.keys()
+my_dict_values = my_dict.values()
+
+
+print("my dict keys ==",my_dict_keys)
+print("my dict values ==",my_dict_values)
+
+
+#Removing Element from dictionary
+
+# 1) using pop() method
+my_dict.pop("degree")
+
+# 2) using del keyword
+del my_dict['city']
+    
+    
+    
+# Clearing dictionary
+
+my_dict.clear()
+
+print(my_dict)
 
