@@ -6,11 +6,6 @@ name = "Manoj G"    #string
 is_Coder = True     #boolean
 
 
-# print("age is ===",age)
-# print("name is ===",name)
-# print("proffestion is  ===",is_Coder)
-
-
 #Data types
 
 age = 44                               #Integer       :-  Represents whole numbers without any decimal points.
@@ -22,14 +17,6 @@ cordinates = (3,5)                     #tuple         :-  similar to lists, but 
 person = {'name':'Manoj','age':'25'}   #dictionary    :-  Represents a collection of key-value pairs.
 unique_number = {1,2,3,4,5}            #Set           :-  Represents an unordered collection of unique elements.
 
-# print("This is interger ===",age)
-# print ("This is float",height)
-# print("This is string ===",name)
-# print("This is Boolean ===",is_Dancer)
-# print("This is list ===",numbers)
-# print("This is tuple ===",cordinates)
-# print("This is dictionary ==== ",person)
-# print("THis is sets ===",type(unique_number))
 
 
 
