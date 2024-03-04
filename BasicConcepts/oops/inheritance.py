@@ -14,7 +14,6 @@ class Cat(Animal):
         
         
 cat1 = Cat()
- 
 cat1.make_sound()
 cat1.type_Of_sound()
 
@@ -64,3 +63,5 @@ c1 = C()
 c1.callc()
 c1.callB()
 c1.callb()
+
+
