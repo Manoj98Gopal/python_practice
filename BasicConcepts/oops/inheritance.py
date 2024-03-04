@@ -1,67 +1,112 @@
+# inheritance is mechanism of accessing the parent class properties and behaviours ( methods and variables )
+
+
 
 # Single level inheritance
-class Animal:
+
+class Car:
     
-    def make_sound(self):
-        print("Animal is making sound ")
+    def __init__(self,model,prize):
+        self.model = model
+        self.prize = prize
+        
+    def getWash(self):
+        print(f"your car model number is this  {self.model}, whasing completed...!")
         
         
         
-class Cat(Animal):
+class Four_seat(Car):
     
-    def type_Of_sound(self):
-        print("Meom meom meoum....!")
+    def __init__(self,model,prize,color):
+        # calling parent class constructor
+        super().__init__(model,prize)
+        self.color = color
+        
+    def getDetails(self):
+        print("Car Model : ",self.model)
+        print("Car Color : ",self.color)
+        print("Car prize : ",self.prize)
         
         
-cat1 = Cat()
-cat1.make_sound()
-cat1.type_Of_sound()
-
-
-print("-------------------single level inheritance end ------------------")
-
-
-# multi level inheritance
-class ChildCat(Cat):
-    
-    def eat(self):
-        print("child cat is eating bread..!")
         
         
-childCat1 = ChildCat()
+maruthi = Four_seat(2018,800000,"Red")
 
-childCat1.type_Of_sound()
-childCat1.make_sound()
-childCat1.eat()
-
+maruthi.getDetails()
+maruthi.getWash()
 
 
-print("-------------------multi level inheritance end ------------------")
-
+# --------------------------------------------------------------------------------------------------------------------------------------
 
 # multiple inheritance
-class A():
+
+class Cricketer:
     
-    def callB(self):
-        print("calling a class")    
+    def __init__(self,name):
+        self.name = name
         
-
-class B():
+    def play(self):
+        print("I am expert in Cricket..!")
+        
+        
+class Comedian:
     
-    def callb(self):
-        print("class b is calling")
+    def __init__(self,name):
+        self.name = name
+        
+    def playing(self):
+        print("I am exprt in playing music..!")           
         
         
-class C(A,B):
-     
-    def callc(self):
-        print("calling the class c")
+class Human(Cricketer,Comedian):
+    
+    def __init__(self,name):
+        super().__init__(name)        
         
-        
-c1 = C()
+    def getDetails(self):
+        super().play()    
+        super().playing() 
+        print("My name is ",self.name)
 
-c1.callc()
-c1.callB()
-c1.callb()
+
+Sharath = Human("Sharath")
 
 
+Sharath.getDetails()
+
+# -------------------------------------------------------------------------------------------------
+
+
+# multilevel inheritance
+
+class GrandFather:
+    
+    def __init__(self,name):
+        self.name = name
+        self.money = 100000
+
+
+    def work(self):
+        print("I am working as Corpentor")
+        
+        
+class Father(GrandFather):
+    
+    def __init__(self,name):
+        super().__init__(name)
+        
+        
+    def  getAsset(self):
+        print("Our asses is ", self.money)
+        
+
+class Son(Father):
+    
+    def __init__(self, name):
+        super().__init__(name)
+        
+    
+    
+Ram = Son("Ram")
+
+Ram.getAsset()
