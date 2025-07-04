@@ -1,3 +1,12 @@
+import utils
+from utils import find_large_num
+from utils import find_small_num
+
+import ecommerce.shipping
+from ecommerce.shipping import calculate,greet
+
+
+
 print("************************** functions *******************************")
 
 def greeting(name):
@@ -100,3 +109,20 @@ cat1.walk()
 dog1 = Dog()
 
 dog1.walk()
+
+
+
+
+array = [33,22,4,3,222,5,46,55,20,3]
+
+
+result1 = find_large_num(array)
+result2 = find_small_num(array)
+
+print("large num : ",result1)
+print("small num : ",result2)
+
+
+
+calculate()
+ecommerce.shipping.greet()
